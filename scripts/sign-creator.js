@@ -4,20 +4,37 @@
  * This properly signs existing metadata as the creator
  */
 
+require('dotenv').config();
 const { createUmi } = require('@metaplex-foundation/umi-bundle-defaults');
 const { createSignerFromKeypair, signerIdentity, publicKey } = require('@metaplex-foundation/umi');
 const { verifyCreatorV1, fetchMetadataFromSeeds } = require('@metaplex-foundation/mpl-token-metadata');
 const fs = require('fs');
 const path = require('path');
 
-// Configuration
-const MINT_ADDRESS = '3NVKYBqjuhLzk5FQNBhcExkruJ7qcaZizkD7Q7veyHGH';
-const NETWORK = process.env.SOLANA_NETWORK || 'https://api.mainnet-beta.solana.com';
-const KEYPAIR_PATH = process.env.WALLET_KEYPAIR || './mainnet-wallet-keypair.json';
+// Configuration from environment variables
+const MINT_ADDRESS = process.env.TOKEN_MINT;
+const NETWORK = process.env.NETWORK || 'mainnet-beta';
+const RPC_URL = NETWORK === 'mainnet-beta'
+  ? (process.env.RPC_URL || 'https://api.mainnet-beta.solana.com')
+  : 'https://api.devnet.solana.com';
+const KEYPAIR_PATH = process.env.TMP_KEYPAIR_PATH || process.env.CREATOR_KEYPAIR_PATH;
 
 async function signCreator() {
   console.log('\n✍️  SIGN METADATA AS CREATOR\n');
   console.log('═'.repeat(50));
+  
+  // Validate required environment variables
+  if (!MINT_ADDRESS) {
+    console.error('❌ TOKEN_MINT not set in environment');
+    console.error('   Set TOKEN_MINT=<mint-address> in .env or environment');
+    process.exit(1);
+  }
+  
+  if (!KEYPAIR_PATH) {
+    console.error('❌ Keypair path not set');
+    console.error('   Set TMP_KEYPAIR_PATH or CREATOR_KEYPAIR_PATH in environment');
+    process.exit(1);
+  }
   
   try {
     // Load wallet keypair
@@ -29,14 +46,14 @@ async function signCreator() {
     const keypairData = JSON.parse(fs.readFileSync(keypairPath, 'utf8'));
     
     // Initialize UMI
-    const umi = createUmi(NETWORK);
+    const umi = createUmi(RPC_URL);
     const keypair = umi.eddsa.createKeypairFromSecretKey(new Uint8Array(keypairData));
     const signer = createSignerFromKeypair(umi, keypair);
     umi.use(signerIdentity(signer));
     
     console.log(`🔑 Wallet: ${signer.publicKey}`);
     console.log(`🪙 Mint: ${MINT_ADDRESS}`);
-    console.log(`🌐 Network: ${NETWORK}`);
+    console.log(`🌐 Network: ${RPC_URL}`);
     console.log('');
     
     // Fetch current metadata

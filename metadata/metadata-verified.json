@@ -40,11 +40,37 @@
     ],
     "creators": [
       {
-        "address": "6S4eDdYXABgtmuk3waLM63U2KHgExcD9mco7MuyG9f5G",
+        "address": "Azvjj21uXQzHbM9VHhyDfdbj14HD8Tef7ZuC1p7sEMk9",
         "share": 100,
         "verified": false
       }
     ],
+    "official_wallets": {
+      "treasury": {
+        "address": "Azvjj21uXQzHbM9VHhyDfdbj14HD8Tef7ZuC1p7sEMk9",
+        "description": "Treasury Wallet - All funds move here"
+      },
+      "token_mint": {
+        "address": "6S4eDdYXABgtmuk3waLM63U2KHgExcD9mco7MuyG9f5G",
+        "description": "$MYXN Core Token Mint Wallet"
+      },
+      "burn": {
+        "address": "HuyT8sNPJMnh9vgJ43PXU4TY696WTWSdh1LBX53ZVox9",
+        "description": "$MYXN Official on-chain burn wallet"
+      },
+      "charity": {
+        "address": "DDoiUCeoUNHHCV5sLT3rgFjLpLUM76tLCUMnAg52o8vK",
+        "description": "$MYXN Charity Wallet - Platform fee charity portion"
+      },
+      "hr": {
+        "address": "Hv8QBqqSfD4nC6N8qZBo7iJE9QiHLnoXJ6sV2hk1XpoR",
+        "description": "$MYXN HR Wallet - Official HR wallet for organization costs"
+      },
+      "marketing": {
+        "address": "4egNUZa2vNBwmc633GAjworDPEJD2F1HK6pSvMnC3WSv",
+        "description": "$MYXN Marketing Wallet - On-chain marketing spending"
+      }
+    },
     "presale_parameters": {
       "presale_price_usd": 0.007,
       "presale_max_per_wallet_usd": 2000,
