@@ -1,3 +1,7 @@
+<p align="center">
+  <img src="tests/Gemini_Generated_Image_5o2u165o2u165o2u.png" alt="MYXN Token Header" width="100%">
+</p>
+
 # $MYXN Token - MyXen Foundation 
 
 [![Solana](https://img.shields.io/badge/Blockchain-Solana-green)](https://solana.com/)
@@ -45,6 +49,10 @@ Every transaction fee collected by the platform is distributed as follows:
 2.  ❤️ **30% Charity:** Funds the MyXen Life foundation.
 3.  💧 **20% Liquidity:** Auto-added to the Liquidity Pool.
 4.  🏦 **40% Treasury:** Funds development, operations, and marketing.
+
+<p align="center">
+  <img src="tests/Gemini_Generated_Image_vj2l6pvj2l6pvj2l.png" alt="MYXN Ecosystem" width="100%">
+</p>
 
 ---
 
