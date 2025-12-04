@@ -1,0 +1,93 @@
+{
+  "name": "MyXen",
+  "symbol": "MYXN",
+  "description": "MyXen is a next-generation, KYC-secured crypto super-app offering 22 integrated services—from payments and remittances to charity and governance. $MYXN is the utility token that powers this entire ecosystem.",
+  "image": "ipfs://bafkreiholwopitkccosr6ebn42frwmpwlzel2c4fcl6wdsvk6y7rwx337a",
+  "external_url": "https://myxen.org",
+  "attributes": [
+    {
+      "trait_type": "Token Standard",
+      "value": "SPL"
+    },
+    {
+      "trait_type": "Blockchain",
+      "value": "Solana"
+    },
+    {
+      "trait_type": "Total Supply",
+      "value": "1,000,000,000"
+    },
+    {
+      "trait_type": "Decimals",
+      "value": "9"
+    },
+    {
+      "trait_type": "Presale Allocation",
+      "value": "50%"
+    },
+    {
+      "trait_type": "Network",
+      "value": "Mainnet"
+    }
+  ],
+  "properties": {
+    "category": "utility",
+    "files": [
+      {
+        "type": "image/png",
+        "uri": "ipfs://bafkreiholwopitkccosr6ebn42frwmpwlzel2c4fcl6wdsvk6y7rwx337a"
+      }
+    ],
+    "creators": [
+      {
+        "address": "6S4eDdYXABgtmuk3waLM63U2KHgExcD9mco7MuyG9f5G",
+        "share": 100,
+        "verified": false
+      }
+    ],
+    "presale_parameters": {
+      "presale_price_usd": 0.007,
+      "presale_max_per_wallet_usd": 2000,
+      "presale_total_tokens": 500000000
+    },
+    "presale_phases": [
+      {
+        "phase": "Private",
+        "tokens": 20000000
+      },
+      {
+        "phase": "Public",
+        "tokens": 480000000
+      }
+    ],
+    "tokenomics": {
+      "allocations": {
+        "charity_reserve": 2,
+        "ecosystem_grants": 10,
+        "marketing_and_growth": 5,
+        "presale_and_public": 50,
+        "staking_and_rewards": 8,
+        "team_and_advisors": 15,
+        "treasury_liquidity": 10
+      },
+      "decimals": 9,
+      "total_supply": 1000000000
+    },
+    "vesting": {
+      "cliff_days": 0,
+      "daily_release_bps": 500,
+      "total_days": 20
+    }
+  },
+  "created_at": "2025-12-05T00:00:00.000Z",
+  "links": {
+    "github_repositories": [
+      "https://github.com/bikkhoto/MYXN-Token.git",
+      "https://github.com/bikkhoto/myxen-foundation.git",
+      "https://github.com/bikkhoto/Solana-DEX-Trading-Platform.git",
+      "https://github.com/bikkhoto/MyXen-Mobile-Application.git"
+    ],
+    "website": "https://myxen.org"
+  },
+  "metadata_version": "1.0"
+}
