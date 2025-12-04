@@ -11,19 +11,36 @@ const { createSignerFromKeypair, signerIdentity, publicKey } = require('@metaple
 const { findMetadataPda, verifyCreatorV1 } = require('@metaplex-foundation/mpl-token-metadata');
 const fs = require('fs');
 
-const TOKEN_MINT = '3NVKYBqjuhLzk5FQNBhcExkruJ7qcaZizkD7Q7veyHGH';
-const RPC_URL = 'https://api.mainnet-beta.solana.com';
+// Configuration from environment variables
+const TOKEN_MINT = process.env.TOKEN_MINT;
+const NETWORK = process.env.NETWORK || 'mainnet-beta';
+const RPC_URL = NETWORK === 'mainnet-beta' 
+  ? (process.env.RPC_URL || 'https://api.mainnet-beta.solana.com')
+  : 'https://api.devnet.solana.com';
 
 async function verifyCreator() {
   console.log('\n🔐 VERIFY TOKEN CREATOR');
   console.log('═══════════════════════════════════════════════════════\n');
   
-  console.log('⚠️  MAINNET OPERATION - Signing as creator');
+  // Validate required environment variables
+  if (!TOKEN_MINT) {
+    console.error('❌ TOKEN_MINT not set in environment');
+    console.error('   Set TOKEN_MINT=<mint-address> in .env or environment');
+    process.exit(1);
+  }
+  
+  console.log(`⚠️  ${NETWORK.toUpperCase()} OPERATION - Signing as creator`);
   console.log('   Mint: ' + TOKEN_MINT);
   console.log('');
   
   // Load wallet keypair
-  const walletKeypairPath = './mainnet-wallet-keypair.json';
+  const walletKeypairPath = process.env.TMP_KEYPAIR_PATH || process.env.CREATOR_KEYPAIR_PATH;
+  if (!walletKeypairPath) {
+    console.error('❌ Wallet keypair path not set');
+    console.error('   Set TMP_KEYPAIR_PATH or CREATOR_KEYPAIR_PATH in environment');
+    process.exit(1);
+  }
+  
   if (!fs.existsSync(walletKeypairPath)) {
     console.error('❌ Wallet keypair not found: ' + walletKeypairPath);
     process.exit(1);
@@ -35,7 +52,7 @@ async function verifyCreator() {
   console.log('✅ Keypair loaded\n');
   
   // Initialize UMI
-  console.log('🔧 Initializing UMI SDK for mainnet...');
+  console.log('🔧 Initializing UMI SDK for ' + NETWORK + '...');
   const umi = createUmi(RPC_URL);
   
   const umiKeypair = umi.eddsa.createKeypairFromSecretKey(walletKeypairBytes);

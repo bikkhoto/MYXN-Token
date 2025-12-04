@@ -1,6 +1,8 @@
 # Environment variables
 .env
 .env.local
+.env.production
+.env.*.local
 
 # Private keys and secrets - NEVER COMMIT
 *.json.secret
@@ -10,12 +12,25 @@ tmp-keypair.json
 hardware-wallet.json
 mainnet-wallet-keypair.json
 mainnet-mint-keypair.json
+devnet-wallet-keypair.json
+devnet-mint-keypair.json
+*-keypair.json
+keypair-*.json
+**/secrets/
+*.pem
+*.key
 convert-private-key.js
+
+# Mnemonic and seed files
+*.seed
+*.mnemonic
+mnemonic.txt
 
 # Node modules
 node_modules/
 package-lock.json
 yarn.lock
+pnpm-lock.yaml
 
 # Rust/Cargo build artifacts
 target/
@@ -34,10 +49,14 @@ deploy-records/
 .idea/
 *.swp
 *.swo
+*.sublime-*
 
 # Logs
 *.log
 logs/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
 
 # Metadata
 .metadata.cids.json
@@ -45,3 +64,13 @@ logs/
 # OS
 .DS_Store
 Thumbs.db
+Desktop.ini
+
+# Test coverage
+coverage/
+.nyc_output/
+
+# Temporary files
+*.tmp
+*.temp
+/tmp/
