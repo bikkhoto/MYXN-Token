@@ -32,13 +32,16 @@ const {
 const fs = require('fs');
 const path = require('path');
 
-// MAINNET CONFIGURATION
-const RPC_URL = 'https://api.mainnet-beta.solana.com';
-const EXPECTED_MINT = '6S4eDdYXABgtmuk3waLM63U2KHgExcD9mco7MuyG9f5G';
-const TREASURY_WALLET = '6S4eDdYXABgtmuk3waLM63U2KHgExcD9mco7MuyG9f5G';
+// MAINNET CONFIGURATION - Use environment variables
+require('dotenv').config();
+const RPC_URL = process.env.RPC_URL || 'https://api.mainnet-beta.solana.com';
+// $MYXN Mint - Core Token Mint Wallet
+const EXPECTED_MINT = process.env.TOKEN_MINT || '6S4eDdYXABgtmuk3waLM63U2KHgExcD9mco7MuyG9f5G';
+// Treasury Wallet - All funds move here
+const TREASURY_WALLET = process.env.TREASURY_PUB || 'Azvjj21uXQzHbM9VHhyDfdbj14HD8Tef7ZuC1p7sEMk9';
 
-const TOTAL_SUPPLY = 1000000000; // 1 billion
-const DECIMALS = 9;
+const TOTAL_SUPPLY = parseInt(process.env.TOTAL_SUPPLY || '1000000000'); // 1 billion
+const DECIMALS = parseInt(process.env.DECIMALS || '9');
 
 async function createMainnetToken() {
   console.log('\n🚀 MYXN MAINNET TOKEN CREATION');

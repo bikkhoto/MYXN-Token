@@ -92,13 +92,25 @@ pub mod myxn_presale {
         );
         anchor_lang::system_program::transfer(transfer_ctx, sol_amount)?;
 
-        // Update records
-        presale.total_raised_usd += amount_usd;
-        presale.total_sold += tokens_to_buy;
+        // Update records using checked arithmetic
+        presale.total_raised_usd = presale
+            .total_raised_usd
+            .checked_add(amount_usd)
+            .ok_or(PresaleError::MathOverflow)?;
+        presale.total_sold = presale
+            .total_sold
+            .checked_add(tokens_to_buy)
+            .ok_or(PresaleError::MathOverflow)?;
 
         purchase.buyer = ctx.accounts.buyer.key();
-        purchase.total_purchased_usd += amount_usd;
-        purchase.total_tokens += tokens_to_buy;
+        purchase.total_purchased_usd = purchase
+            .total_purchased_usd
+            .checked_add(amount_usd)
+            .ok_or(PresaleError::MathOverflow)?;
+        purchase.total_tokens = purchase
+            .total_tokens
+            .checked_add(tokens_to_buy)
+            .ok_or(PresaleError::MathOverflow)?;
         purchase.claimed_tokens = 0;
         purchase.last_claim_timestamp = 0;
 
@@ -111,12 +123,19 @@ pub mod myxn_presale {
         Ok(())
     }
 
-    /// Initialize vesting schedule for a buyer
+    /// Initialize vesting schedule for a buyer (admin only)
     pub fn initialize_vesting(
         ctx: Context<InitializeVesting>,
         vesting_params: VestingParams,
     ) -> Result<()> {
+        let presale = &ctx.accounts.presale_state;
         let vesting = &mut ctx.accounts.vesting_account;
+
+        // Verify admin authorization
+        require!(
+            ctx.accounts.admin.key() == presale.admin,
+            PresaleError::Unauthorized
+        );
 
         vesting.beneficiary = ctx.accounts.beneficiary.key();
         vesting.total_amount = vesting_params.total_amount;
@@ -186,9 +205,15 @@ pub mod myxn_presale {
         );
         token::transfer(transfer_ctx, claimable)?;
 
-        // Update state
-        vesting.claimed_amount += claimable;
-        purchase.claimed_tokens += claimable;
+        // Update state using checked arithmetic
+        vesting.claimed_amount = vesting
+            .claimed_amount
+            .checked_add(claimable)
+            .ok_or(PresaleError::MathOverflow)?;
+        purchase.claimed_tokens = purchase
+            .claimed_tokens
+            .checked_add(claimable)
+            .ok_or(PresaleError::MathOverflow)?;
         purchase.last_claim_timestamp = clock.unix_timestamp;
 
         msg!(
@@ -256,9 +281,7 @@ pub mod myxn_presale {
         let refund_amount = purchase.total_purchased_usd; // Simplified - would need SOL price conversion
 
         // Transfer SOL from escrow back to buyer
-        let seeds = &[b"presale".as_ref(), &[presale.bump]];
-        let signer = &[&seeds[..]];
-
+        // Note: The escrow account is validated through PDA seeds in the account constraints
         **ctx
             .accounts
             .escrow_account
@@ -333,6 +356,12 @@ pub struct PurchasePresale<'info> {
 #[derive(Accounts)]
 pub struct InitializeVesting<'info> {
     #[account(
+        seeds = [b"presale"],
+        bump = presale_state.bump
+    )]
+    pub presale_state: Account<'info, PresaleState>,
+
+    #[account(
         init,
         payer = admin,
         space = 8 + VestingAccount::INIT_SPACE,
@@ -344,7 +373,7 @@ pub struct InitializeVesting<'info> {
     #[account(mut)]
     pub admin: Signer<'info>,
 
-    /// CHECK: Beneficiary
+    /// CHECK: Beneficiary wallet address
     pub beneficiary: AccountInfo<'info>,
 
     pub system_program: Program<'info, System>,
@@ -364,7 +393,7 @@ pub struct ClaimVested<'info> {
 
     #[account(
         mut,
-        seeds = [b"purchase", beneficiary.key().as_ref()],
+        seeds = [b"purchase", beneficiary.key().as_ref(), presale_state.key().as_ref()],
         bump
     )]
     pub purchase_record: Account<'info, PurchaseRecord>,
@@ -396,7 +425,7 @@ pub struct RefundPurchase<'info> {
 
     #[account(
         mut,
-        seeds = [b"purchase", buyer.key().as_ref()],
+        seeds = [b"purchase", buyer.key().as_ref(), presale_state.key().as_ref()],
         bump
     )]
     pub purchase_record: Account<'info, PurchaseRecord>,
@@ -404,8 +433,12 @@ pub struct RefundPurchase<'info> {
     #[account(mut)]
     pub buyer: Signer<'info>,
 
-    /// CHECK: Escrow account
-    #[account(mut)]
+    /// CHECK: Escrow account controlled by PDA, verified through seeds
+    #[account(
+        mut,
+        seeds = [b"escrow"],
+        bump
+    )]
     pub escrow_account: AccountInfo<'info>,
 }
 
