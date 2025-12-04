@@ -65,13 +65,13 @@ async function updateCreators() {
       {
         address: publicKey(signer.publicKey),
         verified: true,  // We can verify immediately since we're the signer
-        percentage: 100
+        share: 100  // Metaplex uses 'share' not 'percentage'
       }
     ];
     
     console.log('🆕 New Creators:');
     newCreators.forEach((c, i) => {
-      console.log(`   ${i + 1}. ${c.address} (${c.percentage}%, verified: ${c.verified})`);
+      console.log(`   ${i + 1}. ${c.address} (${c.share}%, verified: ${c.verified})`);
     });
     console.log('');
     
@@ -112,7 +112,7 @@ async function updateCreators() {
       metadataPda: metadata.publicKey.toString(),
       creators: newCreators.map(c => ({
         address: c.address.toString(),
-        percentage: c.percentage,
+        share: c.share,
         verified: c.verified
       })),
       txSignature: signature,
@@ -134,7 +134,7 @@ async function updateCreators() {
     console.log('📋 Verification:');
     if (updatedMetadata.creators && updatedMetadata.creators.length > 0) {
       updatedMetadata.creators.forEach((c, i) => {
-        console.log(`   ${i + 1}. ${c.address} (${c.percentage}%, verified: ${c.verified})`);
+        console.log(`   ${i + 1}. ${c.address} (${c.share}%, verified: ${c.verified})`);
       });
       console.log('');
       console.log('🎉 SUCCESS! Creators updated and verified!');
