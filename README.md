@@ -18,14 +18,16 @@ MyXen is a next-generation, KYC-secured crypto super-app offering 22 integrated 
 - **Total Supply:** 1,000,000,000 (1 Billion)
 - **Blockchain:** Solana (SPL Standard)
 
-### 📍 Official Addresses
+### 📍 Official Mainnet Addresses
 **⚠️ Verify these addresses on the Solana Explorer before interacting.**
 
 | Role | Address | Description |
 | :--- | :--- | :--- |
-| **Mint Address** | `CHXoAEvTi3FAEZMkWDJJmUSRXxYAoeco4bDMDZQJVWen` | The contract address of the token. |
+| **Mint Address (LIVE)** | `3NVKYBqjuhLzk5FQNBhcExkruJ7qcaZizkD7Q7veyHGH` | **Active mainnet token** - [View on Explorer](https://explorer.solana.com/address/3NVKYBqjuhLzk5FQNBhcExkruJ7qcaZizkD7Q7veyHGH) |
 | **Treasury Wallet** | `6S4eDdYXABgtmuk3waLM63U2KHgExcD9mco7MuyG9f5G` | Managed via Multisig (5/7 signers). |
 | **Burn Wallet** | `13m6FRnMKjcyuX53ryBW7AJkXG4Dt9SR5y1qPjBxSQhc` | Address where tokens are permanently destroyed. |
+
+**Legacy Mint** (Deprecated): `CHXoAEvTi3FAEZMkWDJJmUSRXxYAoeco4bDMDZQJVWen`
 
 ---
 
@@ -76,11 +78,53 @@ This repository contains the Anchor programs (if applicable), SPL token metadata
     solana config set --url devnet
     ```
 
-### Scripts
+### Deployment Scripts
 
-  - `yarn mint`: Scripts to initialize the token mint (Devnet only).
-  - `yarn metadata`: Updates the On-Chain metadata (Name, Symbol, Logo).
-  - `yarn transfer`: Helper script for batch transfers.
+#### Mainnet Deployment (Production)
+```bash
+# Deploy token to mainnet
+export CONFIRM_MAINNET=true
+node scripts/deploy-mainnet-simple.js
+
+# Attach metadata
+export TOKEN_MINT=3NVKYBqjuhLzk5FQNBhcExkruJ7qcaZizkD7Q7veyHGH
+node scripts/attach-metadata-mainnet-umi.js
+
+# Deploy presale program
+anchor build
+anchor deploy --provider.cluster mainnet
+```
+
+#### Testing & Development
+```bash
+# Run token function tests
+node tests/test-token-functions.js
+
+# Test Anchor program
+bash tests/test-anchor-program.sh
+
+# Devnet deployment
+solana config set --url devnet
+node scripts/create-mint-and-supply.js
+```
+
+### Project Structure
+```
+├── programs/               # Anchor smart contracts
+│   └── myxn-presale/      # Presale program with vesting
+├── scripts/               # Deployment and utility scripts
+│   ├── deploy-mainnet-simple.js
+│   ├── attach-metadata-mainnet-umi.js
+│   └── create-mint-mainnet.js
+├── metadata/              # Token metadata & icon
+├── tests/                 # Comprehensive test suites
+└── docs/                  # Full documentation
+```
+
+### Documentation
+- [Mainnet Deployment Guide](./MAINNET_DEPLOYMENT_GUIDE.md) - Complete deployment walkthrough
+- [Test Summary](./TEST_SUMMARY.md) - 9/9 tests passed
+- [Devnet Success](./DEVNET_SUCCESS.md) - Devnet testing results
 
 ---
 
