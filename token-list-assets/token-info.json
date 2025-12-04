@@ -1,0 +1,20 @@
+{
+  "chainId": 101,
+  "address": "3NVKYBqjuhLzk5FQNBhcExkruJ7qcaZizkD7Q7veyHGH",
+  "symbol": "MYXN",
+  "name": "MyXen",
+  "decimals": 9,
+  "logoURI": "https://raw.githubusercontent.com/solana-labs/token-list/main/assets/mainnet/3NVKYBqjuhLzk5FQNBhcExkruJ7qcaZizkD7Q7veyHGH/logo.png",
+  "tags": [
+    "utility-token",
+    "payment",
+    "defi"
+  ],
+  "extensions": {
+    "website": "https://myxenpay.finance",
+    "twitter": "https://x.com/myxenpay",
+    "telegram": "https://t.me/myxenpay",
+    "whitepaper": "https://myxenpay.finance/whitepaper.php",
+    "github": "https://github.com/bikkhoto/MYXN-Token"
+  }
+}
