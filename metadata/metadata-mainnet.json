@@ -1,0 +1,37 @@
+{
+  "name": "MyXen",
+  "symbol": "MYXN",
+  "description": "MYXN — The native decentralized utility token of the MyXenPay ecosystem, powering merchant settlements, university integrations, staking, burns, and cross-chain expansion.",
+  "seller_fee_basis_points": 0,
+  "external_url": "https://myxenpay.finance",
+  "image": "ipfs://bafkreiholwopitkccosr6ebn42frwmpwlzel2c4fcl6wdsvk6y7rwx337a",
+  "attributes": [
+    { "trait_type": "Decimals", "value": 9 },
+    { "trait_type": "Total Supply", "value": "1000000000" },
+    { "trait_type": "Token Type", "value": "SPL" },
+    { "trait_type": "Burn Policy", "value": "On-chain" },
+    { "trait_type": "Ecosystem Services", "value": "22+" }
+  ],
+  "properties": {
+    "files": [
+      { "uri": "ipfs://bafkreiholwopitkccosr6ebn42frwmpwlzel2c4fcl6wdsvk6y7rwx337a", "type": "image/png" }
+    ],
+    "creators": [
+      {
+        "address": "6S4eDdYXABgtmuk3waLM63U2KHgExcD9mco7MuyG9f5G",
+        "share": 100,
+        "verified": false
+      }
+    ],
+    "burn_address": "HuyT8sNPJMnh9vgJ43PXU4TY696WTWSdh1LBX53ZVox9",
+    "mobile_application": {
+      "repo_url": "https://github.com/bikkhoto/MyXen-Mobile-Application.git",
+      "platforms": ["Android","iOS"],
+      "description": "Official mobile wallet & payment application for the MyXen ecosystem."
+    }
+  },
+  "collection": {
+    "name": "MyXenPay Ecosystem",
+    "family": "Utility Tokens"
+  }
+}
