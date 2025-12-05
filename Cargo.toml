@@ -11,3 +11,9 @@ codegen-units = 1
 opt-level = 3
 incremental = false
 codegen-units = 1
+
+# Note: curve25519-dalek vulnerability (RUSTSEC-2024-0344) exists in
+# transitive dependencies from solana-program. This is a timing 
+# side-channel vulnerability that is low-risk for on-chain programs.
+# The fix requires waiting for upstream solana-program updates.
+# See: https://rustsec.org/advisories/RUSTSEC-2024-0344
