@@ -7,6 +7,7 @@
 [![Solana](https://img.shields.io/badge/Blockchain-Solana-green)](https://solana.com/)
 [![License](https://img.shields.io/badge/License-MIT-blue.svg)](LICENSE)
 [![Status](https://img.shields.io/badge/Status-Development-orange)](https://myxen.org)
+[![CodeQL Advanced](https://github.com/bikkhoto/MYXN-Token/actions/workflows/codeql.yml/badge.svg)](https://github.com/bikkhoto/MYXN-Token/actions/workflows/codeql.yml)
 
 **The official Solana SPL Token repository for the MyXen Foundation V2 Ecosystem.**
 
