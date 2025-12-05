@@ -20,6 +20,10 @@ keypair-*.json
 *.pem
 *.key
 convert-private-key.js
+recovery/
+*-keypair.json
+recover.js
+save-and-transfer.js
 
 # Mnemonic and seed files
 *.seed
