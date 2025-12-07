@@ -1,0 +1,13 @@
+{
+  "name": "MyXen",
+  "symbol": "MYXN",
+  "uri": "ipfs://bafybeiasgox3kcgxustfjfipoeu6xqlpu5io6rdpsxltuy6vbzp7d255zu",
+  "seller_fee_basis_points": 0,
+  "creators": [
+    {
+      "address": "Azvjj21uXQzHbM9VHhyDfdbj14HD8Tef7ZuC1p7sEMk9",
+      "share": 100,
+      "verified": false
+    }
+  ]
+}
