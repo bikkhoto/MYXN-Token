@@ -49,7 +49,17 @@ MYXN-Token/
 │   └── config/
 │
 ├── MYXN-Mainnet-Deployment/          # Mainnet deployment files
-├── MYXN-Mainnet-Deployment/          # Deployment & configuration
+│
+├── integration/                      # MyXen Foundation Integration
+│   ├── TokenService.php              # Token operations service
+│   ├── BlockchainService.php         # Blockchain interaction service
+│   └── PresaleController.php         # Presale API controller
+│
+├── Integration Documentation/
+│   ├── MYXEN_FOUNDATION_INTEGRATION.md       # 📖 Architecture & design
+│   ├── MYXEN_FOUNDATION_SETUP.md             # 🚀 Setup instructions
+│   ├── MYXEN_FOUNDATION_CONFIG.md            # ⚙️ Configuration template
+│   └── INTEGRATION_COMPLETION_REPORT.md      # ✅ Project summary
 │
 ├── Documentation/
 │   ├── FEE_DISTRIBUTION_SYSTEM.md          # 📖 Fee system guide
@@ -309,9 +319,53 @@ Distribution:
 
 ---
 
+## 🔗 MyXen Foundation Integration
+
+The MYXN Token has been fully integrated with the **MyXen Foundation** production web3 ecosystem.
+
+### 📖 Integration Documentation
+- **[MYXEN_FOUNDATION_INTEGRATION.md](./MYXEN_FOUNDATION_INTEGRATION.md)** - Complete architecture & integration design
+- **[MYXEN_FOUNDATION_SETUP.md](./MYXEN_FOUNDATION_SETUP.md)** - Step-by-step setup instructions
+- **[MYXEN_FOUNDATION_CONFIG.md](./MYXEN_FOUNDATION_CONFIG.md)** - Environment configuration template
+- **[INTEGRATION_COMPLETION_REPORT.md](./INTEGRATION_COMPLETION_REPORT.md)** - Project completion summary
+
+### 💻 Integration Services
+The `integration/` folder contains production-ready PHP services:
+- **TokenService.php** - Token operations (balance, supply, transfers)
+- **BlockchainService.php** - Blockchain interaction (RPC, transactions, signatures)
+- **PresaleController.php** - Presale API endpoints (status, participation, claims)
+
+### 🚀 Quick Integration Setup
+```bash
+# 1. Clone MyXen Foundation
+git clone https://github.com/bikkhoto/MyXen-Foundation.git
+
+# 2. Copy integration files
+cp integration/*.php MyXen-Foundation/backend/app/Services/
+
+# 3. Configure environment
+cp MYXEN_FOUNDATION_CONFIG.md MyXen-Foundation/backend/.env
+
+# 4. Start Docker services
+cd MyXen-Foundation
+docker-compose up --build -d
+
+# 5. Test integration
+curl http://localhost:8000/api/token/info
+curl http://localhost:8000/api/presale/status
+```
+
+### 🔗 Repositories
+- **MYXN Token**: https://github.com/bikkhoto/MYXN-Token
+- **MyXen Foundation**: https://github.com/bikkhoto/MyXen-Foundation
+- **Integration PR**: https://github.com/bikkhoto/MYXN-Token/pull/8
+
+---
+
 **Last Updated:** December 8, 2025  
 **Status:** ✅ Production Ready  
 **Version:** 1.0  
+**Integration Status:** ✅ Complete (PR #8 - Ready for Merge)
 
 ---
 
@@ -319,8 +373,10 @@ Distribution:
 
 1. ✅ Review this README
 2. ✅ Check token security status (authorities revoked)
-3. ⏳ December 9-14: Integration & testing
-4. 🚀 December 15: Presale launch
-5. 🔥 January 31, 2026: First monthly burn
+3. ✅ Review integration (PR #8)
+4. ⏳ Merge integration branch to main
+5. ⏳ December 9-14: Integration & testing
+6. 🚀 December 15: Presale launch
+7. 🔥 January 31, 2026: First monthly burn
 
 **Ready to launch MYXN!** 🚀
