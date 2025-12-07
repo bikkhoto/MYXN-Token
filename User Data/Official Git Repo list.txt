@@ -1,0 +1,5 @@
+Official Git Repo list:
+1. https://github.com/bikkhoto/Solana-DEX-Trading-Platform.git
+2. https://github.com/bikkhoto/MyXen-Mobile-Application.git
+3. https://github.com/bikkhoto/MyXen-Foundation.git
+4. https://github.com/bikkhoto/MYXN-Token.git

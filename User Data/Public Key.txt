@@ -1,0 +1,38 @@
+================================================================================
+🚀 MYXN TOKEN - MAINNET DEPLOYMENT 🚀
+================================================================================
+
+Seed Phrase (12 words - KEEP SECRET!):
+cabin bonus indoor ripple fun garlic ripple rebel topple loop resist exchange
+
+Derived Wallet (Raw Seed - No Path):
+3Pke1UY5yi1onj56DSgBta9yHJNe7CvYHxXCm1yMKEJA
+
+================================================================================
+MAINNET TOKEN
+================================================================================
+Token Mint Address:
+BiG61e2Xk5aYuRXCW5LzsUSE2PCHsJHjrYUrdQ5ZBU8z
+
+Token Account:
+3knjknAMS4gdDWJLTjvAr6LEB34zdGkyXJhCUPMVD4Ez
+
+Metadata URI:
+ipfs://QmWHasLdMbKPycVGpDTUAmU3QWGVarUdEPj4vs3itXVXZ5
+
+Network: Solana Mainnet
+Created: 2025-12-07
+
+Explorer: https://explorer.solana.com/address/BiG61e2Xk5aYuRXCW5LzsUSE2PCHsJHjrYUrdQ5ZBU8z
+Solscan: https://solscan.io/token/BiG61e2Xk5aYuRXCW5LzsUSE2PCHsJHjrYUrdQ5ZBU8z
+
+================================================================================
+DEVNET TOKEN (FOR TESTING)
+================================================================================
+Token Mint Address: 7gRxH71FtKnPLmQu3VEuojovJRnip45kr2r6h3SjFqwo
+Token Account: 5FSRA3Q6BZ9Jr3PExwcvLCdA5sWhqw5uAy9x4YZZAW6U
+Metadata URI: ipfs://QmTztqgoohjoai7qRpDLJLUu5RNPyBomhZZYXSGhowCLNE
+
+================================================================================
+⚠️  SECURITY WARNING: NEVER SHARE THIS FILE OR COMMIT TO GIT!
+================================================================================

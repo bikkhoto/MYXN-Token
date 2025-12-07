@@ -1,0 +1,78 @@
+{
+  "token_mint": "BiG61e2Xk5aYuRXCW5LzsUSE2PCHsJHjrYUrdQ5ZBU8z",
+  "token_name": "MYXN",
+  "token_decimals": 9,
+  
+  "transaction_fees": {
+    "general": {
+      "percentage": 0.075,
+      "description": "General users"
+    },
+    "freelancer_payroll_merchant": {
+      "percentage": 0.05,
+      "description": "Freelancers, Payroll, Merchants"
+    },
+    "student": {
+      "percentage": 0,
+      "description": "Students (free)"
+    }
+  },
+
+  "fee_distribution": {
+    "burn": {
+      "percentage": 10,
+      "label": "🔥 Burn",
+      "description": "Permanently removed from circulation",
+      "frequency": "monthly",
+      "schedule": "Last day of month, 00:00 UTC"
+    },
+    "charity": {
+      "percentage": 30,
+      "label": "❤️ Charity",
+      "description": "Funds MyXen Life Foundation"
+    },
+    "liquidity": {
+      "percentage": 20,
+      "label": "💧 Liquidity",
+      "description": "Auto-added to Liquidity Pool"
+    },
+    "treasury": {
+      "percentage": 40,
+      "label": "🏦 Treasury",
+      "description": "Development, operations, marketing"
+    }
+  },
+
+  "wallet_addresses": {
+    "burn_wallet": "1111111111111111111111111111111111111111111",
+    "charity_wallet": "3Pke1UY5yi1onj56DSgBta9yHJNe7CvYHxXCm1yMKEJA",
+    "liquidity_wallet": "J9NhyR5Czd1JGbC19hLb4KyrRxmeCX3NuNMnLw5PzqaP",
+    "treasury_wallet": "Treasury1111111111111111111111111111111111111"
+  },
+
+  "notes": {
+    "burn_wallet": "Solana standard burn wallet (all zeros except program ID). Tokens sent here are permanently removed from circulation.",
+    "charity_wallet": "MyXen Life Foundation wallet for charitable donations",
+    "liquidity_wallet": "Automated Market Maker (AMM) wallet for liquidity provision",
+    "treasury_wallet": "MyXen Foundation treasury for operations and development"
+  },
+
+  "verification": {
+    "distribution_sum": "100% ✅",
+    "burn_is_permanent": true,
+    "liquidity_auto_managed": true,
+    "charity_auditable": true,
+    "treasury_transparent": true
+  },
+
+  "monitoring": {
+    "track_monthly_burns": true,
+    "track_fee_collections": true,
+    "export_reports": "monthly",
+    "solscan_verification": true
+  },
+
+  "created_date": "2025-12-08",
+  "version": "1.0",
+  "status": "active"
+}

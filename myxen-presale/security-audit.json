@@ -1,0 +1,13 @@
+{
+  "timestamp": "2025-12-07T19:38:29.813Z",
+  "network": "mainnet-beta",
+  "tokenMint": "BiG61e2Xk5aYuRXCW5LzsUSE2PCHsJHjrYUrdQ5ZBU8z",
+  "authorities": {
+    "mint": null,
+    "freeze": null
+  },
+  "supply": "1000000000000000000",
+  "decimals": 9,
+  "isSecure": true,
+  "issuesFound": []
+}

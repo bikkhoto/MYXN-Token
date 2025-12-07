@@ -1,0 +1,68 @@
+{
+  "_comment": "MAINNET DEPLOYMENT - 2025-12-08 (Updated wallets)",
+  "network": "mainnet-beta",
+  "name": "MyXen",
+  "symbol": "MYXN",
+  "description": "MYXN — The native decentralized utility token of the MyXenPay ecosystem, powering merchant settlements, university integrations, staking, burns, and cross-chain expansion.",
+  "seller_fee_basis_points": 0,
+  "external_url": "https://myxenpay.finance",
+  "image": "ipfs://bafybeiasgox3kcgxustfjfipoeu6xqlpu5io6rdpsxltuy6vbzp7d255zu",
+  "attributes": [
+    { "trait_type": "Decimals", "value": 9 },
+    { "trait_type": "Total Supply", "value": "1000000000" },
+    { "trait_type": "Token Type", "value": "SPL" },
+    { "trait_type": "Burn Policy", "value": "On-chain" },
+    { "trait_type": "Ecosystem Services", "value": "22+" },
+    { "trait_type": "Network", "value": "Solana Mainnet" }
+  ],
+  "properties": {
+    "files": [
+      { "uri": "ipfs://bafybeiasgox3kcgxustfjfipoeu6xqlpu5io6rdpsxltuy6vbzp7d255zu", "type": "image/png" }
+    ],
+    "creators": [
+      {
+        "address": "3Pke1UY5yi1onj56DSgBta9yHJNe7CvYHxXCm1yMKEJA",
+        "share": 100,
+        "verified": true
+      }
+    ],
+    "token_mint": "BiG61e2Xk5aYuRXCW5LzsUSE2PCHsJHjrYUrdQ5ZBU8z",
+    "token_account": "3knjknAMS4gdDWJLTjvAr6LEB34zdGkyXJhCUPMVD4Ez",
+    "metadata_uri": "ipfs://Qmf7gCLDciDrHjuHYPGMYmEfGGbhB8LZDzpUS5Z1jXNPAq",
+    "official_wallets": {
+      "treasury": "H1Lq4SN2tADNqHzVkCkLayoDpdujVxu2RaHvmbg9ifH9",
+      "mint_wallet": "3Pke1UY5yi1onj56DSgBta9yHJNe7CvYHxXCm1yMKEJA",
+      "burn": "AxfjMbAjhfPTYh8pX5vLRK3JjFZsdW48KLUTJ7he7NkU",
+      "charity": "5STdgpKUq5mByEtXAR4adQbDpbmhh11Ju4X4AyoLPZd1",
+      "hr": "Ctwkkfu7CdZ5LmqJATg7wjSuYa8DM5nunfr6jaSj6Y5y",
+      "marketing": "2YPkEdK1y67f7JZfLHredkMjrAYMQN7wswRrzQoWxVgE",
+      "rewards": "7DVuoKcStizNCfBSq86UiQ1CPxXaoWnh5FQ2R4cGajEw",
+      "meme_pump_fun": "686A8HSotsvMKdcp3rsQgPvAmrp9mJNdJ7Mpe3Egv2we",
+      "student": "6uABjnKFYQRPhHvcp97mLK8kL86y2yVqDNWhU4hNF51U",
+      "women": "5STdgpKUq5mByEtXAR4adQbDpbmhh11Ju4X4AyoLPZd1"
+    },
+    "mobile_application": {
+      "repo_url": "https://github.com/bikkhoto/MyXen-Mobile-Application.git",
+      "platforms": ["Android", "iOS"],
+      "description": "Official mobile wallet & payment application for the MyXen ecosystem."
+    },
+    "github_repos": [
+      "https://github.com/bikkhoto/Solana-DEX-Trading-Platform.git",
+      "https://github.com/bikkhoto/MyXen-Mobile-Application.git",
+      "https://github.com/bikkhoto/MyXen-Foundation.git",
+      "https://github.com/bikkhoto/MYXN-Token.git"
+    ],
+    "links": {
+      "website": "https://myxenpay.finance",
+      "whitepaper": "https://myxenpay.finance/whitepaper.php",
+      "twitter": "https://x.com/myxenpay",
+      "telegram": "https://t.me/myxenpay",
+      "reddit": "https://www.reddit.com/user/MyXen_Inc/",
+      "medium": "https://medium.com/@myxeninc",
+      "instagram": "https://www.instagram.com/myxenp_inc/",
+      "facebook": "https://www.facebook.com/myxen.foundation/",
+      "explorer": "https://explorer.solana.com/address/BiG61e2Xk5aYuRXCW5LzsUSE2PCHsJHjrYUrdQ5ZBU8z",
+      "solscan": "https://solscan.io/token/BiG61e2Xk5aYuRXCW5LzsUSE2PCHsJHjrYUrdQ5ZBU8z"
+    }
+  }
+}

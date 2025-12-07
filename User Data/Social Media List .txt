@@ -1,0 +1,9 @@
+Social List:
+"reddit": "https://www.reddit.com/user/MyXen_Inc/",
+    "medium": "https://medium.com/@myxeninc",
+    "instagram": "https://www.instagram.com/myxenp_inc/",
+    "facebook": "https://www.facebook.com/myxen.foundation/"
+ "website": "https://myxenpay.finance",
+    "twitter": "https://x.com/myxenpay",
+    "telegram": "https://t.me/myxenpay",
+    "whitepaper": "https://myxenpay.finance/whitepaper.php",

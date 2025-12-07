@@ -1,0 +1,89 @@
+# 🔐 SENSITIVE FILES - NEVER COMMIT
+# ====================================
+
+# Private Keys & Wallet Files
+*privatekey*
+*Mintwallet*
+*.privatekey
+*.private
+*.secret
+*.pem
+*.key
+
+# User Data - Some files should be public (metadata.json, token-icon.png)
+# But keep sensitive files out
+User Data/Mintwallet*
+User Data/*[Pp]rivate*
+User Data/*[Ss]ecret*
+User Data/*.key
+User Data/*.pem
+
+# Environment Variables
+.env
+.env.local
+.env.*.local
+
+# Node modules & dependencies
+node_modules/
+npm-debug.log
+yarn-debug.log
+yarn-error.log
+package-lock.json
+yarn.lock
+
+# Build outputs
+dist/
+build/
+out/
+coverage/
+.turbo/
+.next/
+
+# IDE & Editor
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+.DS_Store
+.env*.local
+Thumbs.db
+
+# OS
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# Temporary files
+*.tmp
+*.bak
+*.backup
+temp/
+tmp/
+
+# Logs
+logs/
+*.log
+
+# Cache
+.cache/
+.eslintcache
+tsconfig.tsbuildinfo
+
+# Deployment
+.anchor/
+target/
+Cargo.lock
+
+# Test coverage
+.nyc_output/
+coverage/
+
+# Git
+.git/
+.gitkeep
+
+# Solana
+.anchor/
+solana-deploy-key.json
+id.json
