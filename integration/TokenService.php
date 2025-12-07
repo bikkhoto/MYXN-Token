@@ -4,7 +4,13 @@ namespace App\Services;
 
 use Illuminate\Support\Facades\Http;
 use Illuminate\Support\Facades\Cache;
+use Illuminate\Support\Facades\Log;
 use Exception;
+
+// Import Laravel helper functions if not available
+if (!function_exists('config')) {
+    require_once __DIR__ . '/../../vendor/autoload.php';
+}
 
 /**
  * TokenService
