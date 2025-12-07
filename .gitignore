@@ -4,19 +4,34 @@
 # Private Keys & Wallet Files
 *privatekey*
 *Mintwallet*
+*private-key*
+*privkey*
+*keystore*
 *.privatekey
 *.private
 *.secret
 *.pem
 *.key
+*.json.secret
+*.encrypted
+
+# Wallet & Blockchain Sensitive Data
+*wallet*.txt
+*address*.txt
+*seed*
+*mnemonic*
+*passphrase*
 
 # User Data - Some files should be public (metadata.json, token-icon.png)
 # But keep sensitive files out
 User Data/Mintwallet*
 User Data/*[Pp]rivate*
 User Data/*[Ss]ecret*
+User Data/*[Ww]allet*
+User Data/*[Aa]ddress*
 User Data/*.key
 User Data/*.pem
+User Data/*.seed
 
 # Environment Variables
 .env
