@@ -1,0 +1,35 @@
+{
+  "timestamp": "2025-12-04T19:14:05.945Z",
+  "network": "devnet",
+  "mint": "DL41ms25heCSkxNuYnC2C7aXjogDnC6fk3V2hDcuU35C",
+  "results": {
+    "passed": 6,
+    "failed": 0,
+    "tests": [
+      {
+        "name": "Verify Mint Account",
+        "status": "PASS"
+      },
+      {
+        "name": "Verify Treasury Account",
+        "status": "PASS"
+      },
+      {
+        "name": "Verify Metadata Account",
+        "status": "PASS"
+      },
+      {
+        "name": "Token Transfer",
+        "status": "PASS"
+      },
+      {
+        "name": "Verify Authorities",
+        "status": "PASS"
+      },
+      {
+        "name": "Treasury SOL Balance",
+        "status": "PASS"
+      }
+    ]
+  }
+}

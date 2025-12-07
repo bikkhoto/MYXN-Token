@@ -1,0 +1,18 @@
+{
+  "network": "mainnet-beta",
+  "timestamp": "2025-12-04T19:48:38.496Z",
+  "mint": "6S4eDdYXABgtmuk3waLM63U2KHgExcD9mco7MuyG9f5G",
+  "wallet": "Azvjj21uXQzHbM9VHhyDfdbj14HD8Tef7ZuC1p7sEMk9",
+  "tokenAccount": "GC6FHSvwaV5tYaZgJiEX1ktCyJrwegvfUZzmwuxT94WY",
+  "supply": 1000000000,
+  "decimals": 9,
+  "mintAuthority": "Azvjj21uXQzHbM9VHhyDfdbj14HD8Tef7ZuC1p7sEMk9",
+  "freezeAuthority": "Azvjj21uXQzHbM9VHhyDfdbj14HD8Tef7ZuC1p7sEMk9",
+  "signatures": {
+    "createMint": "2Z4Cg8VzGWj9x4kbDrp2ub99VcRf1TZP39DXUjdCMwK4tZx5sGyLPutJVAyMJyJxWusbueSSjQrb5wTAvQpk1DP6",
+    "createATA": "3prJNiuLV2bA1oHYowCSRaFBuBF9CdpYhVeuE8isKYocZeTBNM2MSgWLbEy38ou8ngcxfk2Hk8WTNpNDwTnLdAQe",
+    "mintTo": "4JPNcaemXfs6bb8h8fkDMXfNZ3rv7JhfSjCcvN2Jof4CLvChRNeKttQu8PJ2f3PRtT6437NR4Aj7BLBoT1VBMRBX"
+  },
+  "costSOL": "0.003521",
+  "remainingSOL": "0.049464"
+}
