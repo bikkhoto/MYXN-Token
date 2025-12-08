@@ -1,0 +1,50 @@
+{
+  "timestamp": "2025-12-08T00:14:11.755Z",
+  "ipfsHash": "QmQs4UE2QNyXsesq5r27AM9hMaw83KPXKxL1ASWA5Uak9D",
+  "ipfsUri": "ipfs://QmQs4UE2QNyXsesq5r27AM9hMaw83KPXKxL1ASWA5Uak9D",
+  "gatewayUrl": "https://gateway.pinata.cloud/ipfs/QmQs4UE2QNyXsesq5r27AM9hMaw83KPXKxL1ASWA5Uak9D",
+  "metadata": {
+    "name": "MyXen",
+    "symbol": "MYXN",
+    "description": "MYXN — The native decentralized utility token of the MyXenPay ecosystem, powering merchant settlements, university integrations, staking, burns, and cross-chain expansion.",
+    "image": "ipfs://bafybeigz3hlyplhl5e6z4u3rqnywf56se7od4u7kzm2fsbxqjsnv6nsufe",
+    "external_url": "https://myxenpay.finance",
+    "attributes": [
+      {
+        "trait_type": "Decimals",
+        "value": 9
+      },
+      {
+        "trait_type": "Total Supply",
+        "value": "1000000000"
+      },
+      {
+        "trait_type": "Token Type",
+        "value": "SPL"
+      },
+      {
+        "trait_type": "Burn Policy",
+        "value": "On-chain"
+      },
+      {
+        "trait_type": "Ecosystem Services",
+        "value": "22+"
+      }
+    ],
+    "properties": {
+      "files": [
+        {
+          "uri": "ipfs://bafybeigz3hlyplhl5e6z4u3rqnywf56se7od4u7kzm2fsbxqjsnv6nsufe",
+          "type": "image/png"
+        }
+      ],
+      "category": "fungible",
+      "creators": [
+        {
+          "address": "HDaSHPBdE61agHAgajStypwu639E5N7TEBGiqLjfEoMu",
+          "share": 100
+        }
+      ]
+    }
+  }
+}

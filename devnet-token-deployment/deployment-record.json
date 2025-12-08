@@ -1,0 +1,14 @@
+{
+  "network": "devnet",
+  "timestamp": "2025-12-07T23:51:15.837Z",
+  "mint": "5LBUoipgpwTtuLxfQPNvAeZN6nTVFzSM7Y2prZTBjkSa",
+  "treasury": "7KEqkukgxL5PZfwQAjne1Jzh5ytnYBh4ocHhJFZfhG6Q",
+  "treasuryATA": "Da1V9JSorWVQXtgMX29tkmwDQyCEojqUdTMgD87dUPhM",
+  "supply": 1000000000,
+  "decimals": 9,
+  "signatures": {
+    "createMint": "hAHxd4jPLfN8wU72MDrTs8bKN4PVVJiKD2DBhGjJipnDtKjaRJcM4UYrvmvVeYH288wKisbo33rJjR8WQ75hvcZ",
+    "createATA": "McdUFVfxX5YjtJxoJktxRG4Zvk4HZRefBZha3qKPdBEGkfbSzn7ho5cY2De1yHYPUgeVe44wEhDiuCA4NCo19G1",
+    "mintTo": "2mjoc4BcByQbhuJ8rqYn9ut57i5QjmUno2gQXjMoX5nKh2jHzT6dh8qJWFqdhBeHZh5AQe6RRiZgz96hiLzY7gDJ"
+  }
+}

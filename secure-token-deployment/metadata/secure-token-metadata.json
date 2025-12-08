@@ -1,0 +1,39 @@
+{
+  "name": "MyXen Secure",
+  "symbol": "MYXNS",
+  "description": "MYXNS - The secure version of MyXen token with enhanced security measures after wallet compromise incident. Immutable SPL token on Solana with fixed supply.",
+  "seller_fee_basis_points": 0,
+  "external_url": "https://myxenpay.finance",
+  "image": "ipfs://bafybeiasgox3kcgxustfjfipoeu6xqlpu5io6rdpsxltuy6vbzp7d255zu",
+  "attributes": [
+    { "trait_type": "Decimals", "value": 9 },
+    { "trait_type": "Total Supply", "value": "1000000000" },
+    { "trait_type": "Token Type", "value": "SPL" },
+    { "trait_type": "Burn Policy", "value": "On-chain" },
+    { "trait_type": "Security Level", "value": "Enhanced" }
+  ],
+  "properties": {
+    "files": [
+      { "uri": "ipfs://bafybeiasgox3kcgxustfjfipoeu6xqlpu5io6rdpsxltuy6vbzp7d255zu", "type": "image/png" }
+    ],
+    "creators": [
+      {
+        "address": "Azvjj21uXQzHbM9VHhyDfdbj14HD8Tef7ZuC1p7sEMk9",
+        "share": 100,
+        "verified": false
+      }
+    ],
+    "security_features": {
+      "multi_signature": "Required for authority transfers",
+      "timelock": "30 days for authority changes",
+      "emergency_freeze": "Available for security incidents"
+    },
+    "links": {
+      "website": "https://myxenpay.finance",
+      "whitepaper": "https://myxenpay.finance/whitepaper.php",
+      "twitter": "https://x.com/myxenpay",
+      "telegram": "https://t.me/myxenpay",
+      "github": "https://github.com/bikkhoto/myxenpay.finance"
+    }
+  }
+}

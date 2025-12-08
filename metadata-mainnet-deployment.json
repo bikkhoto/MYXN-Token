@@ -1,9 +1,9 @@
 {
   "network": "mainnet-beta",
-  "timestamp": "2025-12-04T19:53:06.324Z",
-  "mint": "6S4eDdYXABgtmuk3waLM63U2KHgExcD9mco7MuyG9f5G",
-  "metadataCID": "bafkreiholwopitkccosr6ebn42frwmpwlzel2c4fcl6wdsvk6y7rwx337a",
-  "metadataURI": "ipfs://bafkreiholwopitkccosr6ebn42frwmpwlzel2c4fcl6wdsvk6y7rwx337a",
+  "timestamp": "2025-12-08T18:30:00.000Z",
+  "mint": "BiG61e2Xk5aYuRXCW5LzsUSE2PCHsJHjrYUrdQ5ZBU8z",
+  "metadataCID": "bafybeigz3hlyplhl5e6z4u3rqnywf56se7od4u7kzm2fsbxqjsnv6nsufe",
+  "metadataURI": "ipfs://bafybeigz3hlyplhl5e6z4u3rqnywf56se7od4u7kzm2fsbxqjsnv6nsufe",
   "name": "MyXen",
   "symbol": "MYXN",
   "signature": [

@@ -4,7 +4,7 @@
   "description": "MYXN — The native decentralized utility token of the MyXenPay ecosystem, powering merchant settlements, university integrations, staking, burns, and cross-chain expansion.",
   "seller_fee_basis_points": 0,
   "external_url": "https://myxenpay.finance",
-  "image": "ipfs://bafybeiasgox3kcgxustfjfipoeu6xqlpu5io6rdpsxltuy6vbzp7d255zu",
+  "image": "ipfs://bafybeigz3hlyplhl5e6z4u3rqnywf56se7od4u7kzm2fsbxqjsnv6nsufe",
   "attributes": [
     { "trait_type": "Decimals", "value": 9 },
     { "trait_type": "Total Supply", "value": "1000000000" },
@@ -14,7 +14,7 @@
   ],
   "properties": {
     "files": [
-      { "uri": "ipfs://bafybeiasgox3kcgxustfjfipoeu6xqlpu5io6rdpsxltuy6vbzp7d255zu", "type": "image/png" }
+      { "uri": "ipfs://bafybeigz3hlyplhl5e6z4u3rqnywf56se7od4u7kzm2fsbxqjsnv6nsufe", "type": "image/png" }
     ],
     "creators": [
       {
@@ -24,32 +24,64 @@
       }
     ],
     "official_wallets": {
+      "mint_wallet": {
+        "address": "HDaSHPBdE61agHAgajStypwu639E5N7TEBGiqLjfEoMu",
+        "description": "Mint Wallet - Token minting authority"
+      },
       "treasury": {
-        "address": "Azvjj21uXQzHbM9VHhyDfdbj14HD8Tef7ZuC1p7sEMk9",
+        "address": "2bAi9oHvfXsFHdixKSrTfdFxSrgpCcubMhy5TmUoM8CF",
         "description": "Treasury Wallet - All funds move here"
       },
-      "token_mint": {
-        "address": "6S4eDdYXABgtmuk3waLM63U2KHgExcD9mco7MuyG9f5G",
-        "description": "$MYXN Core Token Mint Wallet"
-      },
       "burn": {
-        "address": "HuyT8sNPJMnh9vgJ43PXU4TY696WTWSdh1LBX53ZVox9",
+        "address": "85rAwrzNfmkyP5h5nNLJbhHmuXicoYDL92ue7BwuuTj8",
         "description": "$MYXN Official on-chain burn wallet"
       },
       "charity": {
-        "address": "DDoiUCeoUNHHCV5sLT3rgFjLpLUM76tLCUMnAg52o8vK",
+        "address": "CT45i1zdaKJ1wi57WyWTU8p5yzqmGKUMqC5Fz2cQRV9p",
         "description": "$MYXN Charity Wallet - Platform fee charity portion"
       },
       "hr": {
-        "address": "Hv8QBqqSfD4nC6N8qZBo7iJE9QiHLnoXJ6sV2hk1XpoR",
+        "address": "8Z4pVEJMUQQfhbWQqciesVjvMUSCMvkuKc8Bp4nNCu6S",
         "description": "$MYXN HR Wallet - Official HR wallet for organization costs"
       },
       "marketing": {
-        "address": "4egNUZa2vNBwmc633GAjworDPEJD2F1HK6pSvMnC3WSv",
+        "address": "3Gx9vZaxVuyqU8aVfj28hJmTGK5orzqFUJbM7fhGHA9x",
         "description": "$MYXN Marketing Wallet - On-chain marketing spending"
+      },
+      "rewards": {
+        "address": "HYJeNgWsv4A7TT9aZLfVDpUZtW35QAfhG3oRNJVxHzv4",
+        "description": "$MYXN Rewards Wallet - Staking and incentive rewards"
+      },
+      "meme_pump_fun": {
+        "address": "J7mUyNLKEQNmrWfeoRwCFeXox1EchxMokYQrwft9cxgm",
+        "description": "$MYXN Meme & Pump.fun Wallet - Community engagement"
+      },
+      "student": {
+        "address": "4zx6gAhXKhimYDoE8o5VsxgeRUtiH79bkzFxb72qjpjh",
+        "description": "$MYXN Student Wallet - Educational program allocation"
+      },
+      "women": {
+        "address": "EHVqxaTVR8usM1MNbCWGMANTqvYf67FXyZhzxWb872Wb",
+        "description": "$MYXN Women Empowerment Wallet - Women support program"
+      },
+      "distribution": {
+        "address": "2Rh5aDVBjqoQ2QToHAYc7qBTDuCdZuUuVz6x7spHdRsN",
+        "description": "$MYXN Distribution Wallet - Primary token distribution"
+      },
+      "payroll": {
+        "address": "EHVqxaTVR8usM1MNbCWGMANTqvYf67FXyZhzxWb872Wb",
+        "description": "$MYXN Payroll Wallet - Employee payments and salaries"
+      },
+      "merchant": {
+        "address": "8YD2qSoYpYXdStcPhpEjdZEZZAvytHyiZYtYJtut2WQW",
+        "description": "$MYXN Merchant Wallet - Merchant settlement processing"
+      },
+      "freelance": {
+        "address": "5M3zFf3svDPpUV5sjumaWzNoYqVKxBiR9ZfXSMjoN7nb",
+        "description": "$MYXN Freelance Wallet - Freelancer payments"
       }
     },
-    "burn_address": "HuyT8sNPJMnh9vgJ43PXU4TY696WTWSdh1LBX53ZVox9",
+    "burn_address": "85rAwrzNfmkyP5h5nNLJbhHmuXicoYDL92ue7BwuuTj8",
     "mobile_application": {
       "repo_url": "https://github.com/bikkhoto/MyXen-Mobile-Application.git",
       "platforms": ["Android","iOS"],
