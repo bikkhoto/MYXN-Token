@@ -102,3 +102,40 @@ coverage/
 .anchor/
 solana-deploy-key.json
 id.json
+
+# Security - Never commit keypairs or private keys
+**/*keypair*.json
+**/treasury-keypair.json
+**/mint-keypair.json
+**/mainnet-*.json
+**/devnet-*.json
+**/solflare-*.json
+**/*private*.json
+**/*secret*.json
+
+# Environment files
+.env
+.env.local
+.env.*.local
+
+# Build artifacts
+target/
+dist/
+build/
+
+# Dependencies
+node_modules/
+package-lock.json
+yarn.lock
+
+# IDE
+.idea/
+.vscode/
+*.swp
+*.swo
+*~
+
+# OS
+.DS_Store
+Thumbs.db
+
